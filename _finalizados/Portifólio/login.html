@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja Dourada - Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo" tabindex="0">Loja Dourada</h1>
+  </header>
+
+  <main>
+    <section class="form-container" aria-label="Formulário de login">
+      <h2>Login</h2>
+      <form id="loginForm" novalidate>
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          aria-required="true"
+          placeholder="seu@email.com"
+          required
+          autocomplete="email"
+        />
+
+        <div class="check">
+          <input type="checkbox" id="manterConectado" name="manterConectado" />
+          <label for="manterConectado">Manter conectado</label>
+        </div>
+
+        <button type="submit" aria-label="Entrar na sua conta">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <div id="toastContainer" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <footer class="footer" role="contentinfo">
+    <p>© 2025 Loja Dourada. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

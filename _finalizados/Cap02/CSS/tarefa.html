@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarefacss</title>
+    <style>
+        hr {
+            height: 5px;
+            background-color: red;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkgoldenrod;
+        }
+
+        h2 {
+
+            color: darkblue;
+            font-style: italic;
+        }
+
+        body {
+            background-color: blanchedalmond;
+        }
+
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="tarefa-professor.html">tarefa v2</a>
+    <h1>Tarefa</h1>
+    <ul>
+        <li>
+            <h2>Quem criou o JavaScript e em que ano ele foi criado</h2>
+        </li>
+        <li style="background-color: yellowgreen;">O JavaScript foi criado em **1995** por **Brendan Eich**, enquanto
+            ele trabalhava na empresa **Netscape
+            Communications Corporation**. Inicialmente, o JavaScript foi desenvolvido como uma linguagem de script para
+            ser executada no lado do cliente (no navegador) para melhorar a interação do usuário nas páginas web.
+
+            O primeiro nome do JavaScript foi **Mocha**, depois passou a ser chamado **LiveScript** e, finalmente, foi
+            renomeado para **JavaScript**, em uma tentativa de capitalizar sobre a popularidade do Java, que estava em
+            alta na época. No entanto, JavaScript e Java são duas linguagens bastante diferentes.</li>
+        <br>
+        <hr>
+        <li>
+            <h2>O que são eventos em JavaScript? Dê um exemplo simples.</h2>
+        </li>
+        <li style="background-color: yellowgreen;">Em JavaScript, eventos são ações ou ocorrências que acontecem no
+            navegador, como o clique de um botão, o
+            movimento do mouse, o envio de um formulário, ou o carregamento de uma página. Esses eventos podem ser
+            detectados e manipulados pelo JavaScript para executar código em resposta a essas ações.
+
+            Por exemplo, você pode criar um evento para responder quando um usuário clica em um botão ou quando ele
+            passa o mouse sobre um elemento.</li>
+        <li>
+            <button id="meuBotao">Clique em mim!</button>
+            <script>
+                // Seleciona o botão pelo id
+                const botao = document.getElementById('meuBotao');
+                // Adiciona um evento de clique no botão
+                botao.addEventListener('click', function () {
+                    alert('Você clicou no botão!');
+                });
+            </script>
+        </li>
+        <br>
+        <hr>
+        <li>
+
+            <h2>O que é Visual Studio Code?</h2>
+        </li>
+        <li style="background-color: yellowgreen;">O VS Code (Visual Studio Code) é um editor de código-fonte
+            desenvolvido pela Microsoft. Ele é leve, rápido e
+            altamente customizável, sendo uma das ferramentas mais populares entre desenvolvedores. Embora seja um
+            editor de código, o VS Code oferece funcionalidades que o tornam bastante completo para desenvolvimento de
+            software, como suporte para diversas linguagens de programação, depuração, controle de versão (Git), e
+            extensões para personalizar ainda mais seu ambiente de trabalho</li>
+        <br>
+        <hr>
+        <li>
+            <h2>O que é Bootstrap?</h2>
+        </li>
+        <li style="background-color: yellowgreen;">O Bootstrap é um framework front-end de código aberto, desenvolvido
+            inicialmente por Mark Otto e Jacob
+            Thornton na Twitter. Ele é utilizado para desenvolver websites e aplicativos web responsivos e com uma
+            interface visual moderna e consistente. O Bootstrap oferece uma série de ferramentas e componentes prontos,
+            como botões, menus, cards, tabelas, formulários e muito mais, que podem ser usados para criar sites de
+            maneira rápida e eficiente.</li>
+
+    </ul>
+
+    <footer>
+        <h3>Criado por Isaque</h3>
+        <h4 style="font-style: italic;">Todos os direitos reservados</h4>
+    </footer>
+</body>
+
+</html>

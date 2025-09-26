@@ -1,0 +1,50 @@
+/* Estilo geral da página */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  background: #f5f5f5;
+}
+ 
+/* Container geral */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ 
+/* Cada card */
+.card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
+}
+ 
+/* Imagens */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+ 
+/* Título */
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+ 
+/* Texto */
+.card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+ 
+/* Layout para telas grandes */
+@media screen and (min-width: 680px) {
+  .container {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LuxCar - Carros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="mostrarUsuario(); verificarLogin(); carregarCarrosPorCategoria();">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container container">
+      <div class="logo">LuxCar</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="categorias.html" class="nav-link">Categorias</a></li>
+          <li><a href="carros.html" class="nav-link active">Carros</a></li>
+          <li><a href="#" id="logoutBtn" class="nav-link logout" onclick="logoutUsuario()">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="userGreeting" style="margin-bottom:16px;">Visitante</div>
+  </header>
+
+  <main class="container" style="padding-top: 110px; min-height: calc(100vh - 130px);">
+    <section>
+      <h2 class="section-title">Carros</h2>
+      <div id="carrosContainer" class="grid" aria-live="polite"></div>
+      <img src="ferrari-roma-3.9-v8-turbo-gasolina-f1dct-wmimagem15440426374.jpg" alt="">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 LuxCar. Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Lista de carros por categoria
+    const carros = {
+      esportivos: [
+        {
+          nome: "Ferrari Roma",
+          preco: 2500000,
+          img: "img/ferrari.jpg",
+          desc: "Motor V8, 620cv, 0–100 km/h em 3,4s."
+        },
+        {
+          nome: "Lamborghini Aventador",
+          preco: 3900000,
+          img: "img/lambo.jpg",
+          desc: "Motor V12, 770cv, 0–100 km/h em 2,8s."
+        }
+      ],
+      luxo: [
+        {
+          nome: "Rolls-Royce Ghost",
+          preco: 3200000,
+          img: "img/rollsroyce.jpg",
+          desc: "Luxo absoluto com motor V12, 571cv."
+        },
+        {
+          nome: "Bentley Continental GT",
+          preco: 1900000,
+          img: "img/bentley.jpg",
+          desc: "Potência e elegância, motor W12, 635cv."
+        }
+      ],
+      suv: [
+        {
+          nome: "Range Rover Vogue",
+          preco: 1500000,
+          img: "img/range-rover.jpg",
+          desc: "SUV de luxo com conforto e tecnologia."
+        },
+        {
+          nome: "Porsche Cayenne",
+          preco: 1300000,
+          img: "img/porsche-cayenne.jpg",
+          desc: "Desempenho esportivo em um SUV."
+        }
+      ]
+    };
+
+    function carregarCarrosPorCategoria() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoria = urlParams.get("categoria") || "esportivos";
+      const container = document.getElementById("carrosContainer");
+
+      container.innerHTML = "";
+
+      if (!carros[categoria]) {
+        container.innerHTML = "<p>Categoria não encontrada.</p>";
+        return;
+      }
+
+      carros[categoria].forEach(car => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("role", "article");
+
+        card.innerHTML = `
+          <img src="${car.img}" alt="${car.nome}" />
+          <div class="card-body">
+            <h4>${car.nome}</h4>
+            <p>${car.desc}</p>
+            <p class="price">R$ ${car.preco.toLocaleString('pt-BR')}</p>
+            <button class="btn-primary" onclick="comprar('${car.nome}', ${car.preco})" aria-label="Comprar ${car.nome}">Comprar</button>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

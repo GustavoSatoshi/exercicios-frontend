@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LuxCar - Categorias</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="mostrarUsuario(); verificarLogin();">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container container">
+      <div class="logo">LuxCar</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="categorias.html" class="nav-link active">Categorias</a></li>
+          <li><a href="carros.html" class="nav-link">Carros</a></li>
+          <li><a href="#" id="logoutBtn" class="nav-link logout" onclick="logoutUsuario()">Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="userGreeting" style="margin-bottom:16px;">Visitante</div>
+  </header>
+
+  <main class="container" style="padding-top: 110px; min-height: calc(100vh - 130px);">
+    <section>
+      <h2 class="section-title">Categorias</h2>
+      <div class="grid">
+        <div class="card" role="button" tabindex="0" onclick="window.location.href='carros.html?categoria=esportivos'" onkeypress="if(event.key === 'Enter') window.location.href='carros.html?categoria=esportivos';" aria-label="Categoria Esportivos">
+          <img src="../Portifólio/img/modelo-de-logotipo-de-carro-esporte_183875-221.jpg" alt="Carro esportivo" />
+          <div class="card-body">
+            <h4>Esportivos</h4>
+            <p>Alta performance e design arrojado.</p>
+          </div>
+        </div>
+        <div class="card" role="button" tabindex="0" onclick="window.location.href='carros.html?categoria=luxo'" onkeypress="if(event.key === 'Enter') window.location.href='carros.html?categoria=luxo';" aria-label="Categoria Luxo">
+          <img src="../Portifólio/img/istockphoto-1253418333-612x612.jpg" alt="Carro de luxo" />
+          <div class="card-body">
+            <h4>Luxo</h4>
+            <p>Conforto e sofisticação máximos.</p>
+          </div>
+        </div>
+        <div class="card" role="button" tabindex="0" onclick="window.location.href='carros.html?categoria=suv'" onkeypress="if(event.key === 'Enter') window.location.href='carros.html?categoria=suv';" aria-label="Categoria SUVs">
+          <img src="../Portifólio/img/20934217-vintage-moderno-suv-carro-logotipo-projeto-gratis-vetor.jpg" alt="SUV" />
+          <div class="card-body">
+            <h4>SUVs</h4>
+            <p>Espaço e robustez para toda a família.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <footer class="footer">
+    <p>&copy; 2025 LuxCar. Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

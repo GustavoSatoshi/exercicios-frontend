@@ -1,0 +1,15 @@
+		h1 {
+			color: #764e36;
+			border-top: solid;
+			border-bottom: solid;
+		}
+
+		h2 {
+			color: #fcfcfc;
+			background-color: #764e36;
+		}
+
+		img {
+			border: solid #764e36;
+			padding: 10px;
+		}

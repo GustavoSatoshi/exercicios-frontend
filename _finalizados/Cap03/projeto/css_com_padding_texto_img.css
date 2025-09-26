@@ -1,0 +1,12 @@
+h2{
+    background-image: url(multimidia/back-bolinha.gif),
+        url(multimidia/importante-saber.jpg);
+    background-repeat: repeat,no-repeat;
+    background-position: center center, center right;
+    color: whitesmoke;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 400px;
+    padding-left: 100px;
+    text-align: center;
+}

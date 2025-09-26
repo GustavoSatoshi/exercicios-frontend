@@ -1,0 +1,137 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      background: white;
+      color: black;
+      max-width: 1100px;
+      margin: 20px auto;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    header img {
+      height: 100px;
+      border-radius: 2px;
+    }
+    .título {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+      margin-bottom: 20px;
+      border-bottom: 6px solid #a7bc9c;
+      font-size: 22px;
+    }
+    .coisoreto {
+      display: flex;
+      gap: 30px;
+    }
+    nav {
+      width: 15%;
+    }
+    nav p {
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid black;
+      cursor: pointer;
+    }
+    main {
+      width: 60%;
+    }
+    main h1 {
+      font-weight: 900;
+      font-size: 28px;
+      border-bottom: 3px solid black;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+    main h3 {
+      font-weight: 700;
+      font-size: 12px;
+      text-align: right;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    main p.it {
+      font-style: italic;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    main p {
+      text-align: justify;
+      margin-top: 10px;
+    }
+    main img {
+      width: 300px;
+      float: left;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+    aside {
+      width: 25%;
+      font-size: 13px;
+      font-weight: normal;
+      color: black;
+    }
+    aside h2 {
+      font-weight: 900;
+      font-size: 16px;
+      margin-bottom: 5px;
+      text-transform: lowercase;
+      border-bottom: 1px solid #ddd;
+    }
+    aside p {
+      margin-bottom: 10px;
+    }
+    aside p.verdinho {
+      font-size: 11px;
+      color: #a7bc9c;
+      margin-top: 0;
+      margin-bottom: 8px;
+      align-items: end;
+      display: flex;
+    }
+    aside p.vermelinho1 {
+      color: #f10101ec;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: -5px;
+      margin-bottom: 20px;
+      
+    }
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-weight: 700;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .coisoreto {
+        flex-direction: column;
+      }
+      nav, main, aside {
+        width: 100%;
+      }
+      main img {
+        width: 100%;
+        float: none;
+        margin: 15px 0;
+      }
+    }

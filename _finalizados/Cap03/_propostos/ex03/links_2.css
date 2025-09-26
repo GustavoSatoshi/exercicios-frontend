@@ -1,0 +1,28 @@
+		h2 {
+			background-color: #7faeb7;
+		}
+
+		a:link {
+			color: #004552;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #ffa700;
+		}
+
+		a:visited {
+			color: #c9e0e5;
+		}
+
+		hr {
+			border: solid #7faeb7;
+		}
+
+		img:hover {
+			border: #ffa700 solid thick;
+		}
+
+		p {
+			font-weight: bolder;
+		}
