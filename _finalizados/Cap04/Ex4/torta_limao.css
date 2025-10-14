@@ -1,0 +1,41 @@
+        body {
+            background-color: #ffffcb;
+            background-image: url(torta_limao_backS.png), url(torta_limao_backI.png);
+            background-repeat: repeat-x, repeat-x;
+            background-position: top center, bottom center;
+            margin: 50px 300px 50px 300px;
+        }
+ 
+        h2 {
+            background-color: #ff9900;
+            color: white;
+            padding: 7px;
+        }
+ 
+        h1 {
+            color: #ff9900;
+        }
+ 
+        div {
+            background-color: #daff95;
+            border-radius: 0 0 35px 35px;
+        }
+ 
+        ol li {
+            list-style-type: none;
+            list-style-image: url(torta_limao_item1.gif);
+            list-style-position: outside;
+        }
+ 
+        ul li {
+            list-style-type: none;
+            list-style-image: url(torta_limao_item2.gif);
+            list-style-position: inline;
+        }
+ 
+        ul li ul li {
+            list-style-type: none;
+            list-style-image: url(torta_limao_item3.gif);
+            list-style-position: inline;
+        }
+ 
